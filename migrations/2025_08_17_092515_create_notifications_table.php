@@ -10,7 +10,7 @@ return new class extends Migration
     {
         Schema::create('notifications', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->datetimes();
+            $table->timestamps();
             $table->string('channel');
             $table->string('recipient');
             $table->string('subject')->nullable();
