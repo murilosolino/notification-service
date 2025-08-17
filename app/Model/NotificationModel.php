@@ -23,7 +23,7 @@ use Hyperf\DbConnection\Model\Model;
  * @property Carbon $updated_at
  */
 
-class Notification extends Model
+class NotificationModel extends Model
 {
 
     protected ?string $table = 'notifications';
