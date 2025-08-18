@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace NotificationService\App\Service;
+namespace App\Service;
 
-use NotificationService\App\Dto\NotificationDto;
-use NotificationService\App\Model\NotificationModel;
-use NotificationService\App\Service\Interfaces\NotificationServiceInterface;
+use App\Dto\NotificationDto;
+use App\Model\NotificationModel;
+use App\Service\Interfaces\NotificationServiceInterface;
 
 class NotificationService implements NotificationServiceInterface
 {

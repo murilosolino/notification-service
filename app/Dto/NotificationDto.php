@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace NotificationService\App\Dto;
+namespace App\Dto;
 
 use DateTime;
 

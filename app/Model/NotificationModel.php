@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace NotificationService\App\Model;
+namespace App\Model;
 
 use Carbon\Carbon;
 use Hyperf\DbConnection\Model\Model;
