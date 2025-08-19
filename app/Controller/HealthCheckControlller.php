@@ -19,6 +19,8 @@ class HealthCheckControlller extends AbstractController
 {
     public function __invoke(ContractResponseInterface $response): ResponseInterface
     {
-        return $response->json([])->withStatus(200);
+        return $response
+            ->raw('the service is active and working')
+            ->withStatus(200);
     }
 }

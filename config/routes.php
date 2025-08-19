@@ -11,12 +11,10 @@ declare(strict_types=1);
  */
 
 use App\Controller\HealthCheckControlller;
-use App\Controller\IndexController;
+use App\Controller\NotificationController;
 use Hyperf\HttpServer\Router\Router;
 
-Router::addRoute(['GET', 'POST', 'HEAD'], '/', 'App\Controller\IndexController@index');
-Router::get('/liveness', HealthCheckControlller::class);
 
-Router::get('/favicon.ico', function () {
-    return '';
-});
+Router::post('/notification', NotificationController::class);
+
+Router::get('/', HealthCheckControlller::class);

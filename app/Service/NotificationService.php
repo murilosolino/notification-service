@@ -18,10 +18,10 @@ class NotificationService implements NotificationServiceInterface
         $this->notificationModel = $notificationModel;
     }
 
-    public function createNotification(NotificationDto $dto): void
+    public function createNotification(NotificationDto $dto): NotificationModel
     {
         $data = $dto->toArray();
 
-        $this->notificationModel::create($data);
+        return $this->notificationModel::create($data);
     }
 }
