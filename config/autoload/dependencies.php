@@ -1,6 +1,9 @@
 <?php
 
 declare(strict_types=1);
+
+use Psr\Log\LoggerInterface;
+
 /**
  * This file is part of Hyperf.
  *
@@ -9,5 +12,4 @@ declare(strict_types=1);
  * @contact  group@hyperf.io
  * @license  https://github.com/hyperf/hyperf/blob/master/LICENSE
  */
-return [
-];
+return [];
