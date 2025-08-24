@@ -6,6 +6,7 @@ namespace App\Controller;
 
 use App\Model\NotificationModel;
 use App\Request\NotificationRequest;
+use App\Service\Interfaces\NotificationServiceInterface;
 use App\Service\NotificationService;
 use Hyperf\HttpServer\Contract\RequestInterface;
 use Hyperf\HttpServer\Contract\ResponseInterface as ContractResponseInterface;
@@ -13,7 +14,7 @@ use Psr\Http\Message\ResponseInterface;
 
 class NotificationController extends AbstractController
 {
-    public function __construct(private NotificationService $notificationService) {}
+    public function __construct(private NotificationServiceInterface $notificationService) {}
 
     public function __invoke(NotificationRequest $request, ContractResponseInterface $response): ResponseInterface
     {

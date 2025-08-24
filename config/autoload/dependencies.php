@@ -2,14 +2,10 @@
 
 declare(strict_types=1);
 
-use Psr\Log\LoggerInterface;
+use App\Service\Interfaces\NotificationServiceInterface;
+use App\Service\NotificationService;
 
-/**
- * This file is part of Hyperf.
- *
- * @link     https://www.hyperf.io
- * @document https://hyperf.wiki
- * @contact  group@hyperf.io
- * @license  https://github.com/hyperf/hyperf/blob/master/LICENSE
- */
-return [];
+return [
+    // Aqui dizemos: "Quando alguém pedir a Interface, entregue a Classe"
+    NotificationServiceInterface::class => NotificationService::class,
+];
