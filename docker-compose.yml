@@ -19,9 +19,19 @@ services:
       - .:/opt/www
     depends_on:
       - mysql
+      - redis
     # Adicionamos esta variável que o Hyperf agora espera
     environment:
       - APP_ENV=dev
 
+  redis:
+    image: redis:7
+    container_name: notification-service-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+
 volumes:
   db_data:
+  redis_data:
